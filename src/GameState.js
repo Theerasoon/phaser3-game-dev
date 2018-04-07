@@ -31,6 +31,7 @@ class GameState extends Phaser.Scene
         this.load.image('ground', 'assets/images/ground.jpg');
         this.load.image('stone1', 'assets/images/stone_1.png');
         this.load.image('stone2', 'assets/images/stone_2.png');
+        this.load.audio('kfc', [ 'assets/sounds/BNK48-KFC-8Bit.mp3' ]);
         this.load.atlas(this.zombie.alias, this.zombie.spriteSheet, this.zombie.spriteData);
     }
 
@@ -56,6 +57,11 @@ class GameState extends Phaser.Scene
     {
         this.score = 0;
         this.gameOver = false;
+        this.soundFX = this.sound.add('kfc', {loop: true});
+        this.soundFX.rate = 1.15;
+        this.soundFX.volume -= 0.8;
+        this.soundFX.play();
+
         this.add.image(this.config.centerX, this.config.centerY, 'imgState1');
         this.ground = this.physics.add.staticGroup();
         this.ground.create(this.config.centerX, this.config.height, 'ground').setScale(1.5).refreshBody();
@@ -162,6 +168,7 @@ class GameState extends Phaser.Scene
             this.player.setVelocityX(0);
             player.anims.play('dead');
             this.gameOver = true;
+            this.soundFX.stop();
         }
     }
 }
