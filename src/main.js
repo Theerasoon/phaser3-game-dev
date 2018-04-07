@@ -1,12 +1,14 @@
 import 'phaser';
-import BootScene from './BootScene';
+
+// import BootScene from './BootScene';
+
+import GameState from './GameState';
 
 let config = {
-    type: Phaser.WEBGL,
+    type: Phaser.AUTO,
     parent: 'content',
     width: 1024,
     height: 576,
-    scaleMode: 0, // Phaser.ScaleManager.EXACT_FIT,
     physics: {
         default: 'arcade',
         arcade: {
@@ -14,7 +16,7 @@ let config = {
             debug: false
         }
     },
-    scene: [ BootScene ]
+    scene: [ GameState ]
 };
 
 let game = new Phaser.Game(config);
