@@ -29,15 +29,17 @@ class GameState extends Phaser.Scene
     {
         this.load.image('imgState1', 'assets/images/state_1.jpg');
         this.load.image('ground', 'assets/images/ground.jpg');
+        this.load.image('stone1', 'assets/images/stone_1.png');
+        this.load.image('stone2', 'assets/images/stone_2.png');
         this.load.atlas(this.zombie.alias, this.zombie.spriteSheet, this.zombie.spriteData);
     }
 
     create ()
     {
-        this.initController();
         this.initState();
         this.initPlayer();
-        this.initCollider();
+        this.initStone();
+        this.initController();
     }
 
     update ()
@@ -52,9 +54,12 @@ class GameState extends Phaser.Scene
 
     initState ()
     {
+        this.score = 0;
+        this.gameOver = false;
         this.add.image(this.config.centerX, this.config.centerY, 'imgState1');
         this.ground = this.physics.add.staticGroup();
         this.ground.create(this.config.centerX, this.config.height, 'ground').setScale(1.5).refreshBody();
+        this.scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#fff' });
     }
 
     initPlayer ()
@@ -69,17 +74,29 @@ class GameState extends Phaser.Scene
         this.anims.create({ key: 'dead', frames: this.zombie.getDeadFrames(), frameRate, repeat: false });
         this.anims.create({ key: 'idle', frames: this.zombie.getIdleFrames(), frameRate, repeat: true });
         this.anims.create({ key: 'walk', frames: this.zombie.getWalkFrames(), frameRate, repeat: true });
-    }
 
-    initCollider ()
-    {
         this.player.setCollideWorldBounds(true);
         this.physics.add.collider(this.player, this.ground);
     }
 
+    initStone ()
+    {
+        this.stones = this.physics.add.group();
+        let randomX = Phaser.Math.Between(10, this.config.width - 10);
+        let stoneType = randomX % 2 ? 'stone1' : 'stone2';
+        let stone = this.stones.create(randomX, 32, stoneType);
+        stone.setScale(0.5);
+        let velocity = Phaser.Math.Between(10, 200);
+        stone.setVelocity(0, velocity);
+        this.physics.add.collider(this.stones, this.ground, this.stonesHitGround, null, this);
+        this.physics.add.overlap(this.player, this.stones, this.playerHitStones, null, this);
+    }
+
     updatePlayer ()
     {
+        if (this.gameOver) return;
         this.player.setVelocityX(0);
+        this.children.bringToTop(this.player);
         if (this.controller.right.isDown)
         {
             this.player.flipX = false;
@@ -100,6 +117,51 @@ class GameState extends Phaser.Scene
         if (this.controller.up.isDown && this.player.body.touching.down)
         {
             this.player.setVelocityY(-this.config.player.velocityY);
+            this.initStone();
+        }
+    }
+
+    stonesHitGround (stone, ground)
+    {
+        if (this.gameOver) return;
+        let stones = this.stones;
+        let duration = Phaser.Math.Between(80, 640);
+        this.tweens.add({
+            targets: stone,
+            alpha: { value: 0.1, duration, ease: 'liner' }
+        });
+
+        this.stones.children.iterate(function (child)
+        {
+            if (child.alpha < 0.4)
+            {
+                stones.remove(child);
+                child.destroy();
+                this.score++;
+                this.scoreText.setText('Score: ' + this.score);
+            }
+        }, this);
+
+        if (stones.children.size <= 0)
+        {
+            let stoneNum = Math.min(5, Math.ceil(this.score / 10));
+            for (let i = 1; i <= stoneNum; i++)
+            {
+                this.initStone();
+            }
+        }
+    }
+
+    playerHitStones (player, stone)
+    {
+        if (this.gameOver) return;
+        let xDiff = Math.abs(player.x - stone.x);
+        let yDiff = Math.abs(player.y - stone.y);
+        if (yDiff > 80 && xDiff < 80)
+        {
+            this.player.setVelocityX(0);
+            player.anims.play('dead');
+            this.gameOver = true;
         }
     }
 }
