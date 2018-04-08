@@ -38,7 +38,7 @@ class GameState extends Phaser.Scene
     create (data)
     {
         this.zombie = new Zombie(data.gender);
-        console.log(this.zombie);
+        console.log(data)
         this.initState();
         this.initPlayer();
         this.initStone();
@@ -104,12 +104,7 @@ class GameState extends Phaser.Scene
     {
         if (this.gameOver)
         {
-            this.restart = this.add.text(this.config.centerX - 250, this.config.centerY - 200, 'Press space to play again', { fontSize: '32px', fill: '#fff' });
-            if (this.controller.space.isDown)
-            {
-                this.scene.stop('GameState');
-                this.scene.start('BootScene');
-            }
+            this.restart = this.add.text(this.config.centerX - 250, this.config.centerY - 200, 'Press F5 to play again', { fontSize: '32px', fill: '#fff' });
             return;
         }
         this.player.setVelocityX(0);
