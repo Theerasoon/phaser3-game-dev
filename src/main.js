@@ -1,7 +1,5 @@
 import 'phaser';
-
-// import BootScene from './BootScene';
-
+import BootScene from './BootScene';
 import GameState from './GameState';
 
 let config = {
@@ -16,9 +14,9 @@ let config = {
             debug: false
         }
     },
-    scene: [ GameState ]
+    scene: [ BootScene, GameState ]
 };
 
-let game = new Phaser.Game(config);
+var game = new Phaser.Game(config);
 
 export default game;

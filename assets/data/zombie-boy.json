@@ -1,0 +1,965 @@
+{
+	"textures": [
+		{
+			"image": "male.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 978,
+				"h": 454
+			},
+			"scale": 0.25,
+			"frames": [
+				{
+					"filename": "walk_03.png",
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 87,
+						"h": 121
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 9,
+						"w": 87,
+						"h": 121
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "walk_08.png",
+					"frame": {
+						"x": 1,
+						"y": 124,
+						"w": 73,
+						"h": 121
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 16,
+						"y": 9,
+						"w": 73,
+						"h": 121
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "walk_04.png",
+					"frame": {
+						"x": 1,
+						"y": 247,
+						"w": 87,
+						"h": 120
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 9,
+						"w": 87,
+						"h": 120
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "walk_02.png",
+					"frame": {
+						"x": 76,
+						"y": 124,
+						"w": 81,
+						"h": 120
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 10,
+						"w": 81,
+						"h": 120
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "walk_09.png",
+					"frame": {
+						"x": 90,
+						"y": 1,
+						"w": 75,
+						"h": 120
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 14,
+						"y": 9,
+						"w": 75,
+						"h": 120
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "dead_09.png",
+					"frame": {
+						"x": 1,
+						"y": 369,
+						"w": 125,
+						"h": 73
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 46,
+						"w": 125,
+						"h": 73
+					},
+					"sourceSize": {
+						"w": 157,
+						"h": 132
+					}
+				},
+				{
+					"filename": "walk_07.png",
+					"frame": {
+						"x": 90,
+						"y": 246,
+						"w": 71,
+						"h": 120
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 19,
+						"y": 10,
+						"w": 71,
+						"h": 120
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "walk_05.png",
+					"frame": {
+						"x": 159,
+						"y": 123,
+						"w": 83,
+						"h": 119
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 10,
+						"w": 83,
+						"h": 119
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "walk_10.png",
+					"frame": {
+						"x": 167,
+						"y": 1,
+						"w": 74,
+						"h": 119
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 16,
+						"y": 10,
+						"w": 74,
+						"h": 119
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "dead_02.png",
+					"frame": {
+						"x": 243,
+						"y": 1,
+						"w": 104,
+						"h": 117
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 7,
+						"w": 104,
+						"h": 117
+					},
+					"sourceSize": {
+						"w": 157,
+						"h": 132
+					}
+				},
+				{
+					"filename": "dead_10.png",
+					"frame": {
+						"x": 128,
+						"y": 368,
+						"w": 126,
+						"h": 72
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 22,
+						"y": 47,
+						"w": 126,
+						"h": 72
+					},
+					"sourceSize": {
+						"w": 157,
+						"h": 132
+					}
+				},
+				{
+					"filename": "walk_06.png",
+					"frame": {
+						"x": 163,
+						"y": 244,
+						"w": 81,
+						"h": 117
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 11,
+						"w": 81,
+						"h": 117
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "idle_14.png",
+					"frame": {
+						"x": 244,
+						"y": 120,
+						"w": 75,
+						"h": 117
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 11,
+						"w": 75,
+						"h": 117
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "attack_08.png",
+					"frame": {
+						"x": 246,
+						"y": 239,
+						"w": 74,
+						"h": 117
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 12,
+						"w": 74,
+						"h": 117
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "idle_01.png",
+					"frame": {
+						"x": 321,
+						"y": 120,
+						"w": 74,
+						"h": 117
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 11,
+						"w": 74,
+						"h": 117
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "idle_15.png",
+					"frame": {
+						"x": 349,
+						"y": 1,
+						"w": 74,
+						"h": 117
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 11,
+						"w": 74,
+						"h": 117
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "dead_06.png",
+					"frame": {
+						"x": 256,
+						"y": 358,
+						"w": 80,
+						"h": 95
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 21,
+						"y": 23,
+						"w": 80,
+						"h": 95
+					},
+					"sourceSize": {
+						"w": 157,
+						"h": 132
+					}
+				},
+				{
+					"filename": "idle_02.png",
+					"frame": {
+						"x": 322,
+						"y": 239,
+						"w": 74,
+						"h": 117
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 11,
+						"w": 74,
+						"h": 117
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "walk_01.png",
+					"frame": {
+						"x": 397,
+						"y": 120,
+						"w": 74,
+						"h": 117
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 11,
+						"w": 74,
+						"h": 117
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "attack_07.png",
+					"frame": {
+						"x": 425,
+						"y": 1,
+						"w": 78,
+						"h": 116
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 13,
+						"w": 78,
+						"h": 116
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "dead_07.png",
+					"frame": {
+						"x": 338,
+						"y": 358,
+						"w": 83,
+						"h": 94
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 21,
+						"y": 24,
+						"w": 83,
+						"h": 94
+					},
+					"sourceSize": {
+						"w": 157,
+						"h": 132
+					}
+				},
+				{
+					"filename": "idle_11.png",
+					"frame": {
+						"x": 398,
+						"y": 239,
+						"w": 77,
+						"h": 116
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 12,
+						"w": 77,
+						"h": 116
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "idle_09.png",
+					"frame": {
+						"x": 473,
+						"y": 119,
+						"w": 77,
+						"h": 116
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 12,
+						"w": 77,
+						"h": 116
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "idle_12.png",
+					"frame": {
+						"x": 505,
+						"y": 1,
+						"w": 76,
+						"h": 116
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 12,
+						"w": 76,
+						"h": 116
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "dead_08.png",
+					"frame": {
+						"x": 423,
+						"y": 357,
+						"w": 108,
+						"h": 92
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 21,
+						"y": 28,
+						"w": 108,
+						"h": 92
+					},
+					"sourceSize": {
+						"w": 157,
+						"h": 132
+					}
+				},
+				{
+					"filename": "idle_13.png",
+					"frame": {
+						"x": 477,
+						"y": 237,
+						"w": 76,
+						"h": 116
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 12,
+						"w": 76,
+						"h": 116
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "idle_06.png",
+					"frame": {
+						"x": 552,
+						"y": 119,
+						"w": 76,
+						"h": 116
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 12,
+						"w": 76,
+						"h": 116
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "idle_07.png",
+					"frame": {
+						"x": 583,
+						"y": 1,
+						"w": 76,
+						"h": 116
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 12,
+						"w": 76,
+						"h": 116
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "dead_05.png",
+					"frame": {
+						"x": 533,
+						"y": 355,
+						"w": 76,
+						"h": 97
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 21,
+						"y": 22,
+						"w": 76,
+						"h": 97
+					},
+					"sourceSize": {
+						"w": 157,
+						"h": 132
+					}
+				},
+				{
+					"filename": "idle_08.png",
+					"frame": {
+						"x": 555,
+						"y": 237,
+						"w": 76,
+						"h": 116
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 12,
+						"w": 76,
+						"h": 116
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "idle_03.png",
+					"frame": {
+						"x": 630,
+						"y": 119,
+						"w": 75,
+						"h": 116
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 12,
+						"w": 75,
+						"h": 116
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "idle_04.png",
+					"frame": {
+						"x": 661,
+						"y": 1,
+						"w": 75,
+						"h": 116
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 12,
+						"w": 75,
+						"h": 116
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "dead_11.png",
+					"frame": {
+						"x": 611,
+						"y": 355,
+						"w": 126,
+						"h": 71
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 49,
+						"w": 126,
+						"h": 71
+					},
+					"sourceSize": {
+						"w": 157,
+						"h": 132
+					}
+				},
+				{
+					"filename": "idle_05.png",
+					"frame": {
+						"x": 633,
+						"y": 237,
+						"w": 75,
+						"h": 116
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 12,
+						"w": 75,
+						"h": 116
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "attack_02.png",
+					"frame": {
+						"x": 707,
+						"y": 119,
+						"w": 71,
+						"h": 116
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 12,
+						"w": 71,
+						"h": 116
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "attack_01.png",
+					"frame": {
+						"x": 738,
+						"y": 1,
+						"w": 70,
+						"h": 116
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 12,
+						"w": 70,
+						"h": 116
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "attack_06.png",
+					"frame": {
+						"x": 710,
+						"y": 237,
+						"w": 82,
+						"h": 115
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 14,
+						"w": 82,
+						"h": 115
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "dead_04.png",
+					"frame": {
+						"x": 739,
+						"y": 354,
+						"w": 88,
+						"h": 99
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 17,
+						"w": 88,
+						"h": 99
+					},
+					"sourceSize": {
+						"w": 157,
+						"h": 132
+					}
+				},
+				{
+					"filename": "idle_10.png",
+					"frame": {
+						"x": 780,
+						"y": 119,
+						"w": 77,
+						"h": 115
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 13,
+						"w": 77,
+						"h": 115
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "attack_03.png",
+					"frame": {
+						"x": 810,
+						"y": 1,
+						"w": 69,
+						"h": 115
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 14,
+						"y": 13,
+						"w": 69,
+						"h": 115
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "dead_01.png",
+					"frame": {
+						"x": 881,
+						"y": 1,
+						"w": 96,
+						"h": 108
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 10,
+						"w": 96,
+						"h": 108
+					},
+					"sourceSize": {
+						"w": 157,
+						"h": 132
+					}
+				},
+				{
+					"filename": "attack_05.png",
+					"frame": {
+						"x": 794,
+						"y": 236,
+						"w": 86,
+						"h": 113
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 16,
+						"w": 86,
+						"h": 113
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "dead_03.png",
+					"frame": {
+						"x": 859,
+						"y": 118,
+						"w": 97,
+						"h": 110
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 8,
+						"w": 97,
+						"h": 110
+					},
+					"sourceSize": {
+						"w": 157,
+						"h": 132
+					}
+				},
+				{
+					"filename": "attack_04.png",
+					"frame": {
+						"x": 882,
+						"y": 230,
+						"w": 89,
+						"h": 110
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 19,
+						"w": 89,
+						"h": 110
+					},
+					"sourceSize": {
+						"w": 108,
+						"h": 130
+					}
+				},
+				{
+					"filename": "dead_12.png",
+					"frame": {
+						"x": 829,
+						"y": 351,
+						"w": 126,
+						"h": 71
+					},
+					"rotated": false,
+					"trimmed": true,
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 49,
+						"w": 126,
+						"h": 71
+					},
+					"sourceSize": {
+						"w": 157,
+						"h": 132
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:688de589af3b0d80b41a05f4b5c4f4ab:00da4a040c28ccb61e315835008a7bab:46347cbdf59dfab9f81535329b66a846$"
+	}
+}

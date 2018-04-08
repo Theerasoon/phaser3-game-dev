@@ -1,10 +1,8 @@
 class Zombie
 {
-    constructor ()
+    constructor (gender)
     {
-        this._alias = 'zombie';
-        this._spriteSheet = 'assets/images/zombie.png';
-        this._spriteData = 'assets/data/zombie.json';
+        this._alias = 'zombie-' + gender;
     }
 
     get alias ()

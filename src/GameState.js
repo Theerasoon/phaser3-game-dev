@@ -4,8 +4,7 @@ class GameState extends Phaser.Scene
 {
     constructor ()
     {
-        super({key: 'BootScene'});
-        this.zombie = new Zombie();
+        super({key: 'GameState'});
     }
 
     get config ()
@@ -32,11 +31,14 @@ class GameState extends Phaser.Scene
         this.load.image('stone1', 'assets/images/stone_1.png');
         this.load.image('stone2', 'assets/images/stone_2.png');
         this.load.audio('kfc', [ 'assets/sounds/BNK48-KFC-8Bit.mp3' ]);
-        this.load.atlas(this.zombie.alias, this.zombie.spriteSheet, this.zombie.spriteData);
+        this.load.atlas('zombie-girl', 'assets/images/zombie-girl.png', 'assets/data/zombie-girl.json');
+        this.load.atlas('zombie-boy', 'assets/images/zombie-boy.png', 'assets/data/zombie-boy.json');
     }
 
-    create ()
+    create (data)
     {
+        this.zombie = new Zombie(data.gender);
+        console.log(this.zombie);
         this.initState();
         this.initPlayer();
         this.initStone();
@@ -100,7 +102,16 @@ class GameState extends Phaser.Scene
 
     updatePlayer ()
     {
-        if (this.gameOver) return;
+        if (this.gameOver)
+        {
+            this.restart = this.add.text(this.config.centerX - 250, this.config.centerY - 200, 'Press space to play again', { fontSize: '32px', fill: '#fff' });
+            if (this.controller.space.isDown)
+            {
+                this.scene.stop('GameState');
+                this.scene.start('BootScene');
+            }
+            return;
+        }
         this.player.setVelocityX(0);
         this.children.bringToTop(this.player);
         if (this.controller.right.isDown)
@@ -123,32 +134,30 @@ class GameState extends Phaser.Scene
         if (this.controller.up.isDown && this.player.body.touching.down)
         {
             this.player.setVelocityY(-this.config.player.velocityY);
-            this.initStone();
         }
     }
 
     stonesHitGround (stone, ground)
     {
         if (this.gameOver) return;
-        let stones = this.stones;
         let duration = Phaser.Math.Between(80, 640);
         this.tweens.add({
             targets: stone,
-            alpha: { value: 0.1, duration, ease: 'liner' }
+            alpha: { value: 0, duration, ease: 'expo' }
         });
 
         this.stones.children.iterate(function (child)
         {
-            if (child.alpha < 0.4)
+            if (child.alpha <= 0.8)
             {
-                stones.remove(child);
+                this.stones.remove(child);
                 child.destroy();
                 this.score++;
                 this.scoreText.setText('Score: ' + this.score);
             }
         }, this);
 
-        if (stones.children.size <= 0)
+        if (this.stones.children.size <= 0)
         {
             let stoneNum = Math.min(5, Math.ceil(this.score / 10));
             for (let i = 1; i <= stoneNum; i++)
@@ -162,7 +171,7 @@ class GameState extends Phaser.Scene
     {
         if (this.gameOver) return;
         let xDiff = Math.abs(player.x - stone.x);
-        let yDiff = Math.abs(player.y - stone.y);
+        let yDiff = player.y - stone.y;
         if (yDiff > 80 && xDiff < 80)
         {
             this.player.setVelocityX(0);
